@@ -1,0 +1,12 @@
+<div class="todo-container">
+  <h1>Todo item</h1>
+  <div class="todo">
+    <div *ngIf="todo | async | todo else loading" [innerHTML]="todo | async | todo"></div>
+  </div>
+</div>
+
+<ng-template #loading>
+  <div class="loading">
+    Loading todo...
+  </div>
+</ng-template>
